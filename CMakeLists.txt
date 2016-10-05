@@ -33,10 +33,8 @@ find_package(Boost 1.60.0 COMPONENTS
   date_time
   system
   timer
-  program_options
   filesystem
-  log
-  log_setup REQUIRED)
+  REQUIRED)
 
 message(STATUS "Boost root: ${BOOST_ROOT}")
 
