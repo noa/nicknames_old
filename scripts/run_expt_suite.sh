@@ -5,10 +5,10 @@ set -e
 TRAIN="data/conll/eng/train.utf8"
 VALID="data/conll/eng/valid.utf8"
 
-NTRAIN="--nTrain 50"
-NVALID="--nValid 250"
-NFOLD="--nTrainFold 5"
-NREPL="--nReplication 3"
+NTRAIN="--nTrain 100"
+NVALID="--nValid 1000"
+NFOLD="--nTrainFold 10"
+NREPL="--nReplication 10"
 
 export MPLBACKEND="Agg"
 
@@ -18,8 +18,7 @@ if [ ! -f $FILE ]; then
     scripts/plot_f1_seaborn.py baseline.dat model.dat --output $FILE
 fi
 
-#declare -a arr=(1 10 100)
-declare -a arr=(10)
+declare -a arr=(10 100 1000)
 for size in "${arr[@]}"
 do
     echo "gazetteer size: $size"
