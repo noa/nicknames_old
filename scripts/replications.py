@@ -45,7 +45,7 @@ BASELINE_MODEL = 'crf.model'
 BASELINE_CLASSPATH = '"{}/stanford-ner.jar:{}/lib/*"'.format(BASELINE_PATH, BASELINE_PATH)
 BASELINE_CMD = 'java -server -cp {} -d64 -Xmx10g edu.stanford.nlp.ie.crf.CRFClassifier'.format(BASELINE_CLASSPATH)
 
-MODEL_CMD = 'bash run_expt_smc.sh'
+MODEL_CMD = 'bash scripts/run_expt_smc.sh'
 
 def BASELINE_TRAIN(trainFile, gazFile):
     return '{} -prop {} -serializeTo {} -trainFile {} -useGazettes=true -gazette {}'.format(BASELINE_CMD, BASELINE_FEATURES, BASELINE_MODEL, trainFile, gazFile)

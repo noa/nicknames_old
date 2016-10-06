@@ -62,3 +62,25 @@ which is an empty file above. The command-line interface `nname` may
 also be used directly; see `nname --help` for options.
 
 ### Training with randomized token- and type-level annotation
+
+We now give a more involved example which compares generative and
+discriminative approaches to incorporating gazetteers. This experiment
+requires a discriminative baseline; we use the Stanford NER toolkit
+for this purpose. To download the toolkit:
+
+``` shell
+$ wget http://nlp.stanford.edu/software/stanford-ner-2015-12-09.zip && unzip *.zip
+```
+
+An example properties file is provided under `config/features.prop`,
+copy this to the baseline path:
+
+``` shell
+$ cp config/features.prop stanford-ner-2015-12-09/
+```
+
+Now run the experimental suite via `scripts/replications.py`:
+
+``` shell
+scripts/replications.py data/conll/eng/train.utf8 data/conll/eng/valid.utf8
+```
