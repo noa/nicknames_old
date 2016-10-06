@@ -22,6 +22,13 @@ Install dependencies (minimum version):
 3. GSL (2.2)
 4. boost (1.6)
 
+Initialize git submodules:
+
+``` shell
+$ git submodule init
+$ git submodule update
+```
+
 Build using CMake:
 
 ``` shell
