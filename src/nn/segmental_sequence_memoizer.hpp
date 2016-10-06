@@ -152,11 +152,16 @@ namespace nn {
                       auto emit_model = std::make_unique<emit_t>(emit_param);
                       add_emission_model( k, std::move(emit_model) );
                       if (k == context_tag) {
-                          LOG(INFO) << "WARNING: large prior for " << context_tag;
-                          H->add(k, 2.0);
+                          const double a = 2.0;
+                          LOG(INFO) << "Prior for context tag " << context_tag
+                                    << " = " << a;
+                          H->add(k, a);
                       }
                       else {
-                          H->add(k, 1.0);
+                          const double a = 1.0;
+                          LOG(INFO) << "Prior for tag " << k
+                                    << " = " << a;
+                          H->add(k, a);
                       }
                   }
                   // Add EOS

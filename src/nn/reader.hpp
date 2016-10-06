@@ -326,8 +326,8 @@ namespace nn {
 
             infile.close();
 
-            CHECK(tot_n_words > 0);
-            CHECK(tot_n_tags > 0);
+            //CHECK(tot_n_words > 0);
+            //CHECK(tot_n_tags > 0);
 
             LOG(INFO) << "n_unique_sym = " << unique_syms.size();
             LOG(INFO) << "n_words = " << tot_n_words << " n_tags = " << tot_n_tags;
