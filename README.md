@@ -50,8 +50,7 @@ nname --help
 ### Basic supervised training
 
 The `run_expt_smc.sh` script demonstrates basic supervised
-training. This script simply serves a convenience wrapper around
-`nname`:
+training. This script is a convenience wrapper around `nname`:
 
 ``` shell
 scripts/run_expt_smc.sh data/conll/eng/train.utf8 data/conll/eng/valid.utf8 /dev/null
