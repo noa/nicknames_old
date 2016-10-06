@@ -63,6 +63,14 @@ also be used directly; see `nname --help` for options.
 
 ### Training with randomized token- and type-level annotation
 
+*Prerequisites*: Python 3 along with the following Python packages:
+
+1. seaborn
+2. NLTK
+3. progressbar2
+4. numpy
+5. scipy
+
 We now give a more involved example which compares generative and
 discriminative approaches to incorporating gazetteers. This experiment
 requires a discriminative baseline; we use the Stanford NER toolkit
@@ -79,8 +87,6 @@ copy this to the baseline path:
 $ cp config/features.prop stanford-ner-2015-12-09/
 ```
 
-Now run the experimental suite via `scripts/replications.py`:
-
-``` shell
-scripts/replications.py data/conll/eng/train.utf8 data/conll/eng/valid.utf8
-```
+Now run the experimental suite via `scripts/gen_gaz_plots.sh`, which
+calls `scripts/replications.py` with the English CoNLL data. This will
+save plots summarizing the results in PNG format.
