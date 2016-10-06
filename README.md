@@ -90,4 +90,4 @@ Now run the experimental suite via `scripts/run_expt_suite.sh`, which
 calls `scripts/replications.py` with the English CoNLL data. This will
 save plots summarizing the results in PNG format. For instance:
 
-![Example plot](https://github.com/noa/nicknames/images/en_gaz_delta.png)
+![Example plot](https://github.com/noa/nicknames/blob/master/images/en_gaz_delta.png)
