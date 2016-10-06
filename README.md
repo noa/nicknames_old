@@ -18,10 +18,9 @@ Alternatively, see the steps below for a native build.
 Install dependencies (minimum version):
 
 1. GCC (5)
-2. git
-3. cmake (3)
-4. GSL (2.2)
-5. boost (1.6)
+2. cmake (3)
+3. GSL (2.2)
+4. boost (1.6)
 
 Build using CMake:
 
